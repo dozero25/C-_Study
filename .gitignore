@@ -1,5 +1,7 @@
+# Visual Studio, .NET 관련 파일 무시
+*.sln
+*.csproj
+*.vscode/
 bin/
 obj/
 .vs/
-.csproj
-.sln

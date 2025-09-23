@@ -9,7 +9,7 @@ namespace ex_ShiftOperator
         {
             WriteLine("Testing <<....");
 
-            int a = 1;      // 0000 0001
+            int a = 1;
             WriteLine("a      : {0:D5} (0x{0:X8})", a);
             WriteLine("a << 1 : {0:D5} (0x{0:X8})", a << 1);
             WriteLine("a << 2 : {0:D5} (0x{0:X8})", a << 2);

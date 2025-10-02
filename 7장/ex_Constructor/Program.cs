@@ -19,11 +19,8 @@ namespace ex_Constructor
         }
 
         ~Cat() {
-            Console.WriteLine("소멸자 호출");
             Console.WriteLine($"{Name} : 잘가");
         }
-
-
 
         public void Meow() {
             Console.WriteLine($"{Name} : 애옹");

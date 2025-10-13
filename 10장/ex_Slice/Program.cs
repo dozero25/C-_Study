@@ -1,0 +1,32 @@
+﻿using System;
+
+namespace ex_Slice
+{
+    internal class Program
+    {
+        static void PrintArray(System.Array array)
+        {
+            foreach (var item in array)
+                Console.Write(item);
+            Console.WriteLine();
+        }
+        static void Main(string[] args)
+        {
+            char[] array = new char['Z' - 'A' + 1];
+            for (int i = 0; i < array.Length; i++)
+                array[i] = (char)('A' + i);
+
+            PrintArray(array[..]);  // 0번째부터 끝까지    ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            PrintArray(array[5..]); // 5번째부터 끝까지    FGHIJKLMNOPQRSTUVWXYZ
+
+            Range range_5_10 = 5..10;
+            PrintArray(array[range_5_10]);  // 5번째부터 9까지    FGHIJ
+
+            Index last = ^0;
+            Range range_5_last = 5..last;
+            PrintArray(array[range_5_last]);    // 5번째부터 끝까지    FGHIJKLMNOPQRSTUVWXYZ
+
+            PrintArray(array[^4..^1]);  // 끝에서 4번째부터 끝(^)에서 2번째까지       WXY  
+        }
+    }
+}
